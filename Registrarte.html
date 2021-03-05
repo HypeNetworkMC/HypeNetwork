@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Registrarse</title>
+    <script src="https://kit.fontawesome.com/d4d88a04eb.js" crossorigin="anonymous"></script>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='Registrate.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+   
+   <form class="Formulario" method="POST">
+       <h1>Registrate</h1>
+       <div class="Contenedor">
+           <div class="input-contenedor">
+            <i class="fas fa-user-check" icon></i>
+            <input type="text" name="name" placeholder="Nombre Completo">
+           </div>
+
+       </div>
+
+       <div class="input-contenedor">
+        <i class="far fa-envelope" icon></i>
+        <input type="text" name="email" placeholder="Correo Electronico">
+       </div>
+
+   </div>
+   <div class="input-contenedor">
+    <i class="fas fa-unlock-alt" icon></i>
+    <input type="password" name="password" placeholder="Contraseña">
+   </div>
+   <input type="submit" name="register" value="Registrate" class="button" onclick="validarCorreo(form.correo.value)"> 
+   <p>Al registrarte, Aceptas nuestras Condiciones de uso y Politica de privacidad</p>
+<p>¿Ya tienes cuenta?<a class="link" href="Login.html"><b>Inicia Sesion</b></a></p>
+   </form> 
+<script>
+    function validarCorreo(correo){
+        var expReg= /^[a-z0-9!#$%&'+/=?^_`{|}~-]+(?:.[a-z0-9!#$%&'+/=?^_`{|}~-]+)@(?:[a-z0-9](?:[a-z0-9-][a-z0-9])?.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
+        var esValido= expReg.test(correo);
+        if(esValido==true){
+            alert('El correo electronico es valido');
+        }
+        else{
+            alert('El correo electronico NO es valido');
+        }
+    }
+</script>
+
+    
+</body>
+</html>
